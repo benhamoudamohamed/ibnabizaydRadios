@@ -1,0 +1,57 @@
+<ion-content [fullscreen]="true">
+  <div class="main-image">
+    <div class="main-image-style">
+    </div>
+    <!-- <a href="https://google.com" onclick="window.open('https://google.com', '_system'); return false;">Google</a> -->
+  </div>
+  <div class="inner-image">
+    <ion-fab vertical="top" horizontal="end" slot="fixed" style="top: 35%; right: 5%;">
+      <ion-fab-button color="dark" [disabled]="this.networkStatus === 1">
+        <ion-icon name="arrow-back-circle"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="start">
+        <!-- <ion-fab-button (click)="opensite()"> -->
+        <ion-fab-button href="https://ibnabizayd.com">
+          <ion-icon name="globe"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button href="https://twitter.com/alkayrawani">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button href="https://t.me/joinchat/AAAAAFJ4PcwpgH3QgNP5kA">
+          <ion-icon name="paper-plane"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button href="https://chat.whatsapp.com/4xu6rl0gOmo1KmTZG5xoXS">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button href="https://ibnabizayd.com/contact-us">
+          <ion-icon name="mail"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+
+    <div class="flex_box">
+      <ion-fab vertical="center" horizontal="center" slot="fixed">
+        <ion-fab-button color="dark"  class="play-pause" *ngIf="!isplaying" [disabled]="this.networkStatus === 1" (click)="playTrack(); isplaying=isplaying;">
+          <ion-icon name="play"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="dark"  class="play-pause" *ngIf="isplaying" (click)="pauseTrack(); isplaying=isplaying;">
+          <ion-icon name="stop" *ngIf="showSpinner === false"></ion-icon>
+          <div *ngIf="showSpinner === true">
+            <div class="line-scale-pulse-out">
+              <div></div><div></div><div></div><div></div><div></div>
+            </div>
+          </div>
+        </ion-fab-button>
+      </ion-fab>
+    </div>
+
+    <div class="metadata" *ngIf="this.networkStatus === 0">
+      <p> {{metadata}}</p>
+    </div>
+
+    <div class="metadata" *ngIf="this.networkStatus === 1">
+      <p> {{radioName}}</p>
+      <p> {{radioSubName}}</p>
+    </div>
+    </div>
+</ion-content>

@@ -1,0 +1,107 @@
+:host {
+  ion-header {
+    backdrop-filter: none;
+    ion-toolbar {
+      --background: url('../../assets/footer-back.png');
+    }
+    .header {
+      --color: rgb(19, 165, 75);
+      --border-width: 0;
+      --background: url('../../assets/footer-back.png');
+    }
+  }
+}
+
+.main-image {
+  background-image: url("../../assets/pexels-pixabay-270288.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 35%;
+  max-height: 35%;
+}
+.main-image-style {
+  background: rgba(170, 54, 108, 0.65);
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.inner-image {
+  background-image: url("../../assets/footer-back.png");
+  background-size: contain;
+  height: 65%;
+}
+.flex_box {
+  height: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.play-pause {
+  font-size: 21px;
+  width: 80px;
+  height: 80px;
+}
+ion-fab-button {
+  --background: rgba(170, 54, 108, 0.65);
+}
+.metadata {
+  height: 45%;
+  text-align: center;
+  margin: 0 5%;
+  font-size:larger;
+  font-weight: bolder;
+  color: rgb(116, 31, 83);
+}
+// spinner
+.line-scale-pulse-out > div {
+  background-color: #e83e8c;
+  width: 0.15em;
+  height: 40px;
+  border-radius: 2px;
+  margin: 2px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  display: inline-block;
+  -webkit-animation: line-scale-pulse-out 0.9s -0.6s infinite cubic-bezier(0.85, 0.25, 0.37, 0.85);
+  animation: line-scale-pulse-out 0.9s -0.6s infinite cubic-bezier(0.85, 0.25, 0.37, 0.85);
+}
+.line-scale-pulse-out > div:nth-child(2), .line-scale-pulse-out > div:nth-child(4) {
+  -webkit-animation-delay: -0.4s !important;
+  animation-delay: -0.4s !important;
+}
+.line-scale-pulse-out > div:nth-child(1), .line-scale-pulse-out > div:nth-child(5) {
+  -webkit-animation-delay: -0.2s !important;
+  animation-delay: -0.2s !important;
+}
+@-webkit-keyframes line-scale-pulse-out {
+  0% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1);
+  }
+  50% {
+    -webkit-transform: scaley(0.4);
+    transform: scaley(0.4);
+  }
+  100% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1);
+  }
+}
+@keyframes line-scale-pulse-out {
+  0% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1);
+  }
+  50% {
+    -webkit-transform: scaley(0.4);
+    transform: scaley(0.4);
+  }
+  100% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1);
+  }
+}
+
+
+

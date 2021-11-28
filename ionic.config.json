@@ -1,0 +1,7 @@
+{
+  "name": "إذاعة ابن أبي زيد القيرواني",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

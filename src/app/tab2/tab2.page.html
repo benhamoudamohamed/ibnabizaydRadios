@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+    <ion-title class="ion-text-center">جدول الدروس المباشرة</ion-title>
+    <ion-icon class="ion-margin" slot="end" size="large" name="close-circle" (click)="closeModal()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="showSpinner === true" class="main-image">
+    <div class="sk-cube-grid">
+      <div class="sk-cube sk-cube1"></div>
+      <div class="sk-cube sk-cube2"></div>
+      <div class="sk-cube sk-cube3"></div>
+      <div class="sk-cube sk-cube4"></div>
+      <div class="sk-cube sk-cube5"></div>
+      <div class="sk-cube sk-cube6"></div>
+      <div class="sk-cube sk-cube7"></div>
+      <div class="sk-cube sk-cube8"></div>
+      <div class="sk-cube sk-cube9"></div>
+    </div>
+  </div>
+  <div *ngIf="showSpinner === false" class="main-image">
+    <table *ngFor="let scheduleInfo of scheduleInfos | groupBy: 'category'">
+      <thead>
+        <th colspan="2">دروس يوم {{scheduleInfo.key}}</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let t of scheduleInfo.value">
+          <td style="width: 30%;">{{ t.timeKsa}}</td>
+          <td style="width: 70%;">{{t.title }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ion-content>

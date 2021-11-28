@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">إذاعة ابن أبي زيد القيرواني</string>
+    <string name="title_activity_main">إذاعة ابن أبي زيد القيرواني</string>
+    <string name="package_name">io.ibnabizaydradio</string>
+    <string name="custom_url_scheme">io.ibnabizaydradio</string>
+</resources>
